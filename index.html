@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>My Blog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="./style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header class="navbar">
+      <div class="container nav-inner">
+        <a class="brand" href="#">My Blog</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a class="active" href="#">Home</a>
+          <a href="#">Categories</a>
+          <a href="#">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <!-- page heading -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <h1 class="hero-title">Latest posts</h1>
+        <p class="hero-sub">Fresh reads from the team</p>
+      </div>
+    </section>
+
+    <!-- content -->
+    <main class="container page">
+      <section class="posts" id="postsGrid">
+        <!-- single card you will populate from Strapi -->
+        <article class="postCard" id="postCard">
+          <a class="coverLink" id="postLink" href="#">
+            <figure class="coverBox">
+              <img id="postCover" alt="" />
+            </figure>
+          </a>
+
+          <div class="card-body">
+            <a class="title" id="postTitle" href="#">Post title</a>
+            <p class="meta">
+              <img class="avatar" id="authorAvatar" alt="" />
+              <span id="authorName">Author name</span>
+              <span class="dot" aria-hidden="true">•</span>
+              <time id="createdAt">Date</time>
+            </p>
+          </div>
+        </article>
+
+        <!-- later your JS can append more .postCard items here -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">© 2025 My Blog</div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>

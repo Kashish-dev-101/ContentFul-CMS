@@ -1,0 +1,171 @@
+:root {
+  --maxw: 1120px;
+  --pad: 16px;
+  --radius: 16px;
+  --shadow: 0 10px 30px rgba(2, 6, 23, 0.06);
+  --line: #e5e7eb;
+  --muted: #64748b;
+  --ink: #0f172a;
+  --bg: #f8fafc;
+  --brand: #0ea5e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial;
+  color: var(--ink);
+  background: var(--bg);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+/* top nav */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: #fff;
+  border-bottom: 1px solid var(--line);
+  backdrop-filter: saturate(180%) blur(6px);
+}
+.nav-inner {
+  height: 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+.brand {
+  font-weight: 800;
+  font-size: 20px;
+  letter-spacing: 0.2px;
+}
+.nav-links {
+  display: flex;
+  gap: 16px;
+}
+.nav-links a {
+  font-size: 14px;
+  color: var(--muted);
+}
+.nav-links a.active {
+  color: var(--ink);
+}
+
+/* page header */
+.hero {
+  background: linear-gradient(180deg, #ffffff 0, #fafbff 100%);
+  border-bottom: 1px solid var(--line);
+}
+.hero-inner {
+  padding: 28px 0;
+}
+.hero-title {
+  font-size: 32px;
+  line-height: 1.2;
+  font-weight: 800;
+  margin: 0 0 6px;
+}
+.hero-sub {
+  color: var(--muted);
+  margin: 0;
+}
+
+/* grid */
+.page {
+  padding: 28px 0 56px;
+}
+.posts {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 640px) {
+  .posts {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 960px) {
+  .posts {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* card */
+.postCard {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+.coverLink {
+  display: block;
+}
+.coverBox {
+  width: 100%;
+  aspect-ratio: 16/9;
+  background: #eef2f7;
+  overflow: hidden;
+}
+.coverBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 14px;
+}
+.title {
+  display: block;
+  margin: 6px 2px 8px;
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 800;
+}
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--muted);
+  font-size: 14px;
+  margin: 0 2px 2px;
+}
+.avatar {
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  object-fit: cover;
+  background: #e2e8f0;
+}
+.dot {
+  opacity: 0.5;
+}
+
+.footer {
+  border-top: 1px solid var(--line);
+  padding: 22px 0 40px;
+  color: var(--muted);
+  text-align: center;
+}
