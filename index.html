@@ -4,13 +4,22 @@
     <meta charset="utf-8" />
     <title>My Blog</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Fresh reads and insights from the team" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
     <link href="./style.css" rel="stylesheet" />
   </head>
   <body>
-    <!-- navbar -->
     <header class="navbar">
       <div class="container nav-inner">
-        <a class="brand" href="#">My Blog</a>
+        <a class="brand" href="#">
+          <span class="brand-icon">B</span>
+          <span class="brand-text">Blog</span>
+        </a>
         <nav class="nav-links" aria-label="Primary">
           <a class="active" href="#">Home</a>
           <a href="#">Categories</a>
@@ -19,43 +28,56 @@
       </div>
     </header>
 
-    <!-- page heading -->
     <section class="hero">
       <div class="container hero-inner">
-        <h1 class="hero-title">Latest posts</h1>
-        <p class="hero-sub">Fresh reads from the team</p>
+        <span class="hero-badge">Latest Updates</span>
+        <h1 class="hero-title">Welcome to the Blog</h1>
+        <p class="hero-sub">
+          Discover fresh reads, insights, and stories from our team
+        </p>
       </div>
     </section>
 
-    <!-- content -->
     <main class="container page">
       <section class="posts" id="postsGrid">
-        <!-- single card you will populate from Strapi -->
         <article class="postCard" id="postCard">
           <a class="coverLink" id="postLink" href="#">
             <figure class="coverBox">
-              <img id="postCover" alt="" />
+              <img id="postCover" alt="" loading="lazy" />
+              <div class="coverOverlay"></div>
             </figure>
           </a>
 
           <div class="card-body">
+            <span class="card-tag">Article</span>
             <a class="title" id="postTitle" href="#">Post title</a>
             <p class="meta">
               <img class="avatar" id="authorAvatar" alt="" />
-              <span id="authorName">Author name</span>
-              <span class="dot" aria-hidden="true">•</span>
-              <time id="createdAt">Date</time>
+              <span class="author-info">
+                <span class="author-name" id="authorName">Author name</span>
+                <time class="post-date" id="createdAt">Date</time>
+              </span>
             </p>
           </div>
         </article>
-
-        <!-- later your JS can append more .postCard items here -->
       </section>
     </main>
 
     <footer class="footer">
-      <div class="container">© 2025 My Blog</div>
+      <div class="container footer-inner">
+        <div class="footer-brand">
+          <span class="brand-icon">B</span>
+          <span class="brand-text">Blog</span>
+        </div>
+        <p class="footer-copy">&copy; 2025 My Blog. All rights reserved.</p>
+        <nav class="footer-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+          <a href="#">Contact</a>
+        </nav>
+      </div>
     </footer>
+    <script src="./config.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>

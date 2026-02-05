@@ -9,9 +9,7 @@ const postCard = document.querySelector("#postCard");
 const postLink = document.querySelector("#postLink");
 const titleLink = document.querySelector("#postTitle");
 
-const SPACE_ID = "s94p987xag5p";
-const ENV_ID = "master";
-const DELIVERY_TOKEN = "3l84KJ-Ucvtchxz6886MZpXNz8GAe77v_XT8NLa0eDA";
+const { SPACE_ID, ENV_ID, DELIVERY_TOKEN } = CONFIG.CONTENTFUL;
 
 const CONTENTFUL_BASE = `https://cdn.contentful.com/spaces/${SPACE_ID}/environments/${ENV_ID}`;
 
