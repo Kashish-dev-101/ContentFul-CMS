@@ -25,7 +25,7 @@ The ImageKit plugin for Contentful lets you access your media library directly w
 ├── index.html          # Main HTML page
 ├── style.css           # Styling
 ├── script.js           # Contentful API integration
-├── config.js           # API credentials (gitignored)
+├── config.js           # API credentials
 └── config.example.js   # Template for credentials
 ```
 
