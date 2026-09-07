@@ -20,3 +20,6 @@ Thumbs.db
 *.log
 npm-debug.log*
 code-walkthrough.txt
+
+# Claude Code config
+.claude/
